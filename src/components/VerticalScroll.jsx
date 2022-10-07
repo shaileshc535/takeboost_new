@@ -50,10 +50,6 @@ const VerticalScroll = () => {
     const onScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight;
 
-      // console.log("scrollPos", scrollPos);
-      // console.log("Top", Top);
-      // console.log("Bottom", Bottom);
-
       if (scrollPos >= 2701 && scrollPos <= 5620) {
         setElderberryDiv(true);
         setLemmonDiv(false);
@@ -113,30 +109,67 @@ const VerticalScroll = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", (event) => {
-      Image01Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image02Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image03Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image04Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image05Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image06Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image07Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image08Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image09Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image10Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image11Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
-      Image12Ref.current.style.transform =
-        "rotate(" + window.pageYOffset / 10 + "deg)";
+      const scrollPos = window.scrollY + window.innerHeight;
+
+      if (scrollPos >= 2701 && scrollPos <= 3430) {
+        Image01Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2 + "deg)";
+      }
+
+      if (scrollPos >= 3230 && scrollPos <= 4160) {
+        Image02Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 3960 && scrollPos <= 4890) {
+        Image03Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 4690 && scrollPos <= 5680) {
+        Image04Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 5480 && scrollPos <= 6410) {
+        Image05Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 6210 && scrollPos <= 7140) {
+        Image06Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 6940 && scrollPos <= 7870) {
+        Image07Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 7670 && scrollPos <= 8600) {
+        Image08Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 8400 && scrollPos <= 9330) {
+        Image09Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 9130 && scrollPos <= 10060) {
+        Image10Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 9860 && scrollPos <= 10790) {
+        Image11Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+      }
+
+      if (scrollPos >= 10590 && scrollPos <= 12150) {
+        Image12Ref.current.style.transform =
+          "rotate(" + window.pageYOffset / 4.33 + "deg)";
+      }
     });
   }, []);
 
