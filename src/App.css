@@ -1024,9 +1024,9 @@
   border-radius: 100%;
 } */
 
-* {
+/* * {
   cursor: none;
-}
+} */
 
 .cursor-dot-outline {
   pointer-events: none;
