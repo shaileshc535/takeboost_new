@@ -5,15 +5,12 @@ import HeroHeading from "../components/HeroHeading";
 import VerticalScroll from "../components/VerticalScroll";
 import CardsScroll from "../components/CardsScroll";
 import Footer from "../components/Footer";
-import Slider from "../components/bottel/Slider";
 import Bottel from "../components/bottel/Bottel";
-// import Cursor from "../components/cursor/Cursor";
 const Home = () => {
   return (
     <>
       <Grid className="home-wrapper">
         <Grid className="hero-section">
-          {/* <Cursor /> */}
           <Header />
           <Bottel />
           <HeroHeading />
