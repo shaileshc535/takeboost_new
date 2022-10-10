@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Grid } from "@mui/material";
 import React, { useRef, useEffect } from "react";
 
@@ -95,7 +96,14 @@ const Cursor = () => {
       window.removeEventListener("mouseenter", mouseEnterEvent);
       window.removeEventListener("mouseleave", mouseLeaveEvent);
     };
-  }, []);
+  }, [
+    animateDotOutline,
+    mouseEnterEvent,
+    mouseLeaveEvent,
+    mouseMoveEvent,
+    mouseOutEvent,
+    mouseOverEvent,
+  ]);
 
   return (
     <Grid className="cursor_container">
