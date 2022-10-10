@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 
 const Cursor = () => {
   const dot = useRef(null);

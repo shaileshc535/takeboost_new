@@ -9,7 +9,7 @@ const Bottel = () => {
   useEffect(() => {
     window.addEventListener("scroll", (event) => {
       const scrollPos = window.scrollY + window.innerHeight;
-
+      console.log("scrollPos", scrollPos);
       if (scrollPos > 1000) {
         mainRef.current.style.justifyContent = "center";
         mainRef.current.style.transition = " justifyContent 1s ease-out";
@@ -19,6 +19,11 @@ const Bottel = () => {
       } else {
         mainRef.current.style.justifyContent = "flex-end";
         mainRef.current.style.transition = " justifyContent 2s ease-out";
+      }
+
+      if (scrollPos >= 14800) {
+        mainRef.current.style.translate = "(-500,-500)";
+        bottelWrapperRef.current.style.translate = "(-500,-500)";
       }
     });
   }, []);
