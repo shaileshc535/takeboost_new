@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import { CursorProvider } from "react-cursor-custom";
 
 const Cursor = () => {
   const [mousePosition, setMousePosition] = useState({

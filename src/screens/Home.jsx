@@ -6,6 +6,7 @@ import VerticalScroll from "../components/VerticalScroll";
 import CardsScroll from "../components/CardsScroll";
 import Footer from "../components/Footer";
 import Bottel from "../components/bottel/Bottel";
+
 const Home = () => {
   return (
     <>
