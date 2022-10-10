@@ -30,7 +30,6 @@ const Cursor = () => {
     },
   };
 
-  console.log("mousePosition", mousePosition);
   return (
     <Grid className="cursor_wraper">
       <motion.div

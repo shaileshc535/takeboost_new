@@ -1035,9 +1035,11 @@
 }
 
 .bottel_images {
-  background-color: #1c87c9;
+  background-color: #1c87c9 !important;
+  display: block !important;
+  overflow: hidden !important;
 }
-
+/* 
 .v360-menu-btns {
   background-color: #fff;
-}
+} */

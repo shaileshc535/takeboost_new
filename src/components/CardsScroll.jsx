@@ -73,7 +73,6 @@ const CardsScroll = () => {
         rightThreeRef.current.style.border = "2px solid #ff710d";
         rightThreeRef.current.style.color = "#000000";
       }
-      console.log("scrollPos", scrollPos);
     };
 
     window.addEventListener("scroll", onScroll);

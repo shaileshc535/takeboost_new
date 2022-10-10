@@ -38,14 +38,6 @@ const Test = () => {
 
       // Check if element is at bottom or past
       if (scrollPos > div3Bottom) {
-        console.log(
-          "div3Bottom",
-          div3Bottom,
-          "scrollPos",
-          scrollPos,
-          "itemThree",
-          div3Bottom - scrollPos
-        );
         setPercentShow((prevState) => ({
           ...prevState,
           itemThree: div3Bottom - scrollPos,
