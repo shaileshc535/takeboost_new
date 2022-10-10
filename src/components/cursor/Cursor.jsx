@@ -31,9 +31,6 @@ const Cursor = () => {
 
   const toggelCursorSize = () => {
     if (cursorEnlarged.current) {
-      dot.current.style.transform = "translate(-50%,-50%) scale(0.75)";
-      dotOutline.current.style.transform = "translate(-50%,-50%) scale(1.5)";
-    } else {
       dot.current.style.transform = "translate(-50%,-50%) scale(1)";
       dotOutline.current.style.transform = "translate(-50%,-50%) scale(1)";
     }
