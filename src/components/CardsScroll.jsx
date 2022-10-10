@@ -15,7 +15,8 @@ const CardsScroll = () => {
     leftTwoRef = useRef(null),
     rightOneRef = useRef(null),
     rightTwoRef = useRef(null),
-    rightThreeRef = useRef(null);
+    rightThreeRef = useRef(null),
+    mainRef = useRef(null);
 
   useLayoutEffect(() => {
     // const topPos = (element) => element.getBoundingClientRect().top;
@@ -24,40 +25,55 @@ const CardsScroll = () => {
     const onScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight;
 
-      if (scrollPos >= 13525) {
+      if (scrollPos >= 13425) {
         setRightCardOne(true);
       }
       if (scrollPos <= 13526) {
         setRightCardOne(false);
       }
 
-      if (scrollPos >= 13775) {
+      if (scrollPos >= 13675) {
         setRightCardTwo(true);
       }
       if (scrollPos <= 13776) {
         setRightCardTwo(false);
       }
 
-      if (scrollPos >= 14000) {
+      if (scrollPos >= 13900) {
         setRightCardThree(true);
       }
       if (scrollPos <= 14001) {
         setRightCardThree(false);
       }
 
-      if (scrollPos >= 13770) {
+      if (scrollPos >= 13670) {
         setLeftCardOne(true);
       }
       if (scrollPos <= 13771) {
         setLeftCardOne(false);
       }
 
-      if (scrollPos >= 13975) {
+      if (scrollPos >= 13875) {
         setLeftCardTwo(true);
       }
       if (scrollPos <= 13976) {
         setLeftCardTwo(false);
       }
+
+      if (scrollPos >= 14800) {
+        mainRef.current.style.backgroundColor = "#ff710d";
+        leftTwoRef.current.style.border = "2px solid #ffffff";
+        leftTwoRef.current.style.color = "#ffffff";
+        rightThreeRef.current.style.border = "2px solid #ffffff";
+        rightThreeRef.current.style.color = "#ffffff";
+      } else {
+        mainRef.current.style.backgroundColor = "#fffcf4";
+        leftTwoRef.current.style.border = "2px solid #ff710d";
+        leftTwoRef.current.style.color = "#000000";
+        rightThreeRef.current.style.border = "2px solid #ff710d";
+        rightThreeRef.current.style.color = "#000000";
+      }
+      console.log("scrollPos", scrollPos);
     };
 
     window.addEventListener("scroll", onScroll);
@@ -66,7 +82,7 @@ const CardsScroll = () => {
 
   return (
     <>
-      <Grid className="card-scroll-container">
+      <Grid className="card-scroll-container" ref={mainRef}>
         <Grid container item className="card-scroll-heading-wrapper">
           <Typography variant="h1" className="card-scroll-heading">
                Vegan
@@ -101,7 +117,6 @@ const CardsScroll = () => {
             <Grid container className="scroll-wrapper">
               <Grid
                 ref={leftOneRef}
-                animate={leftCardOne}
                 zIndex={2}
                 item
                 className={
@@ -178,7 +193,6 @@ const CardsScroll = () => {
                     : "right-scroll-card-01"
                 }
                 ref={rightOneRef}
-                animate={rightCardOne}
                 zIndex={2}
               >
                 <Grid className="star-image-wrapper">

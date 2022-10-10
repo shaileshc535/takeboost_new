@@ -1,10 +1,9 @@
+/* eslint-disable no-lone-blocks */
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { Grid, Typography } from "@mui/material";
 import elderberry from "../assets/image/elderberries.png";
 import orange from "../assets/image/orange.png";
 import zinc from "../assets/image/zinc.png";
-// import { motion, useScroll, useTransform } from "framer-motion";
-// import { ScrollRotate } from "react-scroll-rotate";
 
 const VerticalScroll = () => {
   const [image1, setImage1] = useState(false);
@@ -41,12 +40,6 @@ const VerticalScroll = () => {
   const diamondRef = useRef(null);
 
   useLayoutEffect(() => {
-    // const topPos = (element) => element.getBoundingClientRect().top;
-    // const bottomPos = (element) => element.getBoundingClientRect().bottom;
-
-    // const Top = topPos(mainRef.current);
-    // const Bottom = bottomPos(mainRef.current);
-
     const onScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight;
 
@@ -113,62 +106,134 @@ const VerticalScroll = () => {
 
       if (scrollPos >= 2701 && scrollPos <= 3430) {
         Image01Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2 + "deg)";
+          "rotate(" + window.pageYOffset / 2 + "deg) scale(1.3)";
+        {
+          scrollPos < 3330
+            ? (Image01Ref.current.style.opacity = "1")
+            : (Image01Ref.current.style.opacity = "0");
+        }
+        Image01Ref.current.style.transition = "opacity 1s ease-out";
       }
 
-      if (scrollPos >= 3230 && scrollPos <= 4160) {
+      if (scrollPos >= 3330 && scrollPos <= 4160) {
         Image02Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3.5 + "deg) scale(1.3)";
+        {
+          scrollPos < 3960
+            ? (Image02Ref.current.style.opacity = "1")
+            : (Image02Ref.current.style.opacity = "0");
+        }
+        Image02Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 3960 && scrollPos <= 4890) {
         Image03Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 4660
+            ? (Image03Ref.current.style.opacity = "1")
+            : (Image03Ref.current.style.opacity = "0");
+        }
+        Image03Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 4690 && scrollPos <= 5680) {
         Image04Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 5460
+            ? (Image04Ref.current.style.opacity = "1")
+            : (Image04Ref.current.style.opacity = "0");
+        }
+        Image04Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 5480 && scrollPos <= 6410) {
         Image05Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 6260
+            ? (Image05Ref.current.style.opacity = "1")
+            : (Image05Ref.current.style.opacity = "0");
+        }
+        Image05Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 6210 && scrollPos <= 7140) {
         Image06Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 6960
+            ? (Image06Ref.current.style.opacity = "1")
+            : (Image06Ref.current.style.opacity = "0");
+        }
+        Image06Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 6940 && scrollPos <= 7870) {
         Image07Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 7660
+            ? (Image07Ref.current.style.opacity = "1")
+            : (Image07Ref.current.style.opacity = "0");
+        }
+        Image07Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 7670 && scrollPos <= 8600) {
         Image08Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 8400
+            ? (Image08Ref.current.style.opacity = "1")
+            : (Image08Ref.current.style.opacity = "0");
+        }
+        Image08Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 8400 && scrollPos <= 9330) {
         Image09Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 9130
+            ? (Image09Ref.current.style.opacity = "1")
+            : (Image09Ref.current.style.opacity = "0");
+        }
+        Image09Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 9130 && scrollPos <= 10060) {
         Image10Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 9860
+            ? (Image10Ref.current.style.opacity = "1")
+            : (Image10Ref.current.style.opacity = "0");
+        }
+        Image10Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 9860 && scrollPos <= 10790) {
         Image11Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 2.57 + "deg)";
+          "rotate(" + window.pageYOffset / 3 + "deg) scale(1.3)";
+        {
+          scrollPos < 10590
+            ? (Image11Ref.current.style.opacity = "1")
+            : (Image11Ref.current.style.opacity = "0");
+        }
+        Image11Ref.current.style.transition = "opacity 1s ease-out";
       }
 
       if (scrollPos >= 10590 && scrollPos <= 12150) {
         Image12Ref.current.style.transform =
-          "rotate(" + window.pageYOffset / 4.33 + "deg)";
+          "rotate(" + window.pageYOffset / 5 + "deg) scale(1.3)";
+        {
+          scrollPos < 11950
+            ? (Image12Ref.current.style.opacity = "1")
+            : (Image12Ref.current.style.opacity = "0");
+        }
+        Image12Ref.current.style.transition = "opacity 1s ease-out";
       }
     });
   }, []);
@@ -415,119 +480,3 @@ const VerticalScroll = () => {
 };
 
 export default VerticalScroll;
-
-// import React, { useState } from "react";
-// import { motion, useViewportScroll, useTransform } from "framer-motion";
-
-// const letterStyle = {
-//   width: "calc(100% - 1rem)",
-//   height: "calc(100% - 1rem)",
-//   top: "0.5rem",
-//   left: "0.5rem",
-//   backgroundColor: "#f8efd5",
-//   overflow: "hidden",
-//   padding: "1rem",
-//   boxSizing: "border-box",
-//   position: "absolute",
-// };
-
-// function Letter() {
-//   const { scrollYProgress } = useViewportScroll();
-//   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 1.5]);
-//   const yPosAnim = useTransform(scrollYProgress, [0, 0.4, 1], [0, -250, -100]);
-
-//   return (
-//     <motion.div
-//       style={{
-//         ...letterStyle,
-//         scale: scaleAnim,
-//         y: yPosAnim,
-//       }}
-//     >
-//       <p style={{ marginTop: 0 }}>Hello, it's been a while!</p>
-//       <p>
-//         Let's take a look at how we made this animation, we'll discuss the
-//         following:
-//       </p>
-//       <ul>
-//         <li>
-//           How to <code>useViewportScroll</code> works
-//         </li>
-//         <li>
-//           Why <code>useTransform</code> is useful
-//         </li>
-//       </ul>
-//       <p>
-//         Read the article,{" "}
-//         <a href="https://blog.sethcorker.com/scroll-animation-with-framer-motion">
-//           how to use <code>useViewportScroll</code> and{" "}
-//           <code>useTransform</code> in Framer Motion
-//         </a>
-//       </p>
-//     </motion.div>
-//   );
-// }
-
-// const envelopeStyle = {
-//   width: "28rem",
-//   height: "15rem",
-//   scale: 1,
-//   position: "sticky",
-//   top: "10rem",
-//   left: "calc(50% - 14rem)",
-//   boxShadow: `rgba(0, 0, 0, 0.5) 0px 0px 150px 10px`,
-// };
-
-// const frontfaceStyle = {
-//   width: "100%",
-//   height: "100%",
-//   backgroundColor: "#debda1",
-//   position: "relative",
-//   left: 0,
-//   top: 0,
-//   display: "flex",
-//   justifyContent: "center",
-//   alignItems: "center",
-// };
-
-// function Envelope({ children }) {
-//   const [ffLayer, setFfLayer] = useState(0);
-//   const { scrollYProgress } = useViewportScroll();
-//   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 1.2]);
-//   const yPosAnim = useTransform(scrollYProgress, [0, 0.5, 1], [0, 100, 200]);
-//   const zRotAnim = useTransform(scrollYProgress, [0, 0.5, 1], [0, 3, 0]);
-
-//   scrollYProgress.onChange((x) => {
-//     setFfLayer(x > 0.4 ? -1 : 0);
-//   });
-
-//   return (
-//     <motion.div
-//       style={{
-//         ...envelopeStyle,
-//         scale: scaleAnim,
-//         y: yPosAnim,
-//         rotateZ: zRotAnim,
-//       }}
-//     >
-//       {children}
-//       <div style={{ ...frontfaceStyle, zIndex: ffLayer }}>
-//         <button onClick={() => window.scrollTo(0, 1500)}>Open Me</button>
-//       </div>
-//     </motion.div>
-//   );
-// }
-
-// const letterSceneStyle = {
-//   height: "50vh",
-// };
-
-// export default function LetterScene() {
-//   return (
-//     <div style={letterSceneStyle}>
-//       <Envelope>
-//         <Letter />
-//       </Envelope>
-//     </div>
-//   );
-// }
