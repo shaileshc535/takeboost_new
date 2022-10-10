@@ -6,6 +6,7 @@ import VerticalScroll from "../components/VerticalScroll";
 import CardsScroll from "../components/CardsScroll";
 import Footer from "../components/Footer";
 import Bottel from "../components/bottel/Bottel";
+import Cursor from "../components/cursor/Cursor";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Grid className="home-wrapper">
         <Grid className="hero-section">
           <Header />
+          <Cursor />
           <Bottel />
           <HeroHeading />
           <Grid className="vertical_scroll_absolute">
