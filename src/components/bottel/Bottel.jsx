@@ -65,7 +65,6 @@ const Bottel = () => {
           imagePath="/bottel"
           fileName="{index}.webp"
           spinReverse
-          autoplay
         />
       </Grid>
     </Grid>
