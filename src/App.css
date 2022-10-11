@@ -1040,10 +1040,6 @@
   display: block !important;
   overflow: hidden !important;
 }
-/* 
-.v360-menu-btns {
-  background-color: #fff;
-} */
 
 * {
   cursor: none;
@@ -1090,4 +1086,8 @@
   background: rgb(0, 5, 33);
   border-width: 1px;
   border-style: none;
+}
+
+.v360-menu-btns {
+  background-color: #fff;
 }
