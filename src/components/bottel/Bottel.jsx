@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 import ThreeSixty from "react-360-view";
 
@@ -82,6 +82,7 @@ const Bottel = () => {
           disableZoomin
         />
       </Grid>
+      <Button className="buy_button">BUY</Button>
     </Grid>
   );
 };

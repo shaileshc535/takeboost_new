@@ -1057,20 +1057,20 @@
   background-color: transparent;
   z-index: 1;
   pointer-events: none;
-  transform: translate(-34%, 0);
+  transform: translate(-25%, 0);
   transition: all 1s linear;
 }
 
 .bottel_wrapper_active {
-  width: 450px;
-  padding-bottom: 200px;
+  width: 600px;
+  padding-bottom: 150px;
   transform: translate(0, -85%);
   transition: all 1s linear;
 }
 
 .bottel_wrapper {
-  width: 450px;
-  padding-bottom: 200px;
+  width: 600px;
+  padding-bottom: 150px;
 }
 
 .bottel_images {
@@ -1116,3 +1116,37 @@
 .v360-menu-btns {
   background-color: #fff;
 } */
+
+.v360-image-container {
+  z-index: 200;
+  background: transparent;
+  pointer-events: none;
+}
+
+.buy_button {
+  position: absolute;
+  z-index: 500 !important;
+  pointer-events: all !important;
+  top: -41% !important;
+  right: 13% !important;
+  width: max(40px, 3.819vw) !important;
+  height: max(40px, 3.819vw) !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  font-size: 1.3rem !important;
+  line-height: 1.3rem !important;
+  border: 2px solid #000 !important;
+  border-radius: 100% !important;
+  padding: 2rem 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0px 0px 8px 8px #33333325;
+  animation: button_border 2s infinite linear forwards;
+}
+
+@keyframes button_border {
+  0% {
+    box-shadow: none;
+  }
+}
