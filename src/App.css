@@ -657,6 +657,8 @@
   justify-content: center !important;
   align-items: center !important;
   flex-direction: column !important;
+  /* position: relative !important;
+    z-index: 45; */
 }
 
 .card-scroll-right {
@@ -682,6 +684,8 @@
   justify-content: flex-start;
   align-items: center;
   width: 100% !important;
+  position: relative !important;
+  z-index: 50;
 }
 
 .left-scroll-card {
@@ -860,6 +864,8 @@
   justify-content: center !important;
   align-items: flex-start !important;
   padding-left: 20%;
+  position: relative !important;
+  z-index: 45;
 }
 
 .card-heading-05 {
@@ -1057,20 +1063,8 @@
   background-color: transparent;
   z-index: 1;
   pointer-events: none;
-  transform: translate(-25%, 0);
+  transform: translate(-31%, 0);
   transition: all 1s linear;
-}
-
-.bottel_wrapper_active {
-  width: 600px;
-  padding-bottom: 150px;
-  transform: translate(0, -85%);
-  transition: all 1s linear;
-}
-
-.bottel_wrapper {
-  width: 600px;
-  padding-bottom: 150px;
 }
 
 .bottel_images {
@@ -1127,8 +1121,8 @@
   position: absolute;
   z-index: 500 !important;
   pointer-events: all !important;
-  top: -41% !important;
-  right: 13% !important;
+  top: 0% !important;
+  right: 30% !important;
   width: max(40px, 3.819vw) !important;
   height: max(40px, 3.819vw) !important;
   background-color: #fff !important;
@@ -1143,10 +1137,33 @@
   justify-content: center !important;
   box-shadow: 0px 0px 8px 8px #33333325;
   animation: button_border 2s infinite linear forwards;
+  transition: all 1s linear;
 }
 
 @keyframes button_border {
   0% {
     box-shadow: none;
   }
+}
+
+.bottel_main_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 600px;
+  padding-bottom: 150px;
+}
+
+.bottel_main_wrapper_active {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 600px;
+  padding-bottom: 150px;
+  transform: translate(0, -85%);
+  transition: all 1s linear;
 }

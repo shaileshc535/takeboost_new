@@ -40,9 +40,9 @@ const Bottel = () => {
       setMoveCenter(false);
     }
 
-    if (scrollPos > 14500) {
+    if (scrollPos > 14300) {
       setMoveBottom(true);
-    } else if (scrollPos < 14400) {
+    } else if (scrollPos < 14300) {
       setMoveBottom(false);
     }
   };
@@ -69,20 +69,26 @@ const Bottel = () => {
       ref={mainRef}
     >
       <Grid
-        className={moveBottom ? "bottel_wrapper_active" : "bottel_wrapper"}
-        ref={bottelWrapperRef}
+        className={
+          moveBottom ? "bottel_main_wrapper_active" : "bottel_main_wrapper"
+        }
       >
-        <ThreeSixty
-          ref={bottelRef}
-          className="bottel_images"
-          amount={300}
-          imagePath="/bottel"
-          fileName="{index}.webp"
-          spinReverse
-          disableZoomin
-        />
+        <Grid
+          className={moveBottom ? "bottel_wrapper_active" : "bottel_wrapper"}
+          ref={bottelWrapperRef}
+        >
+          <ThreeSixty
+            ref={bottelRef}
+            className="bottel_images"
+            amount={300}
+            imagePath="/bottel"
+            fileName="{index}.webp"
+            spinReverse
+            disableZoomin
+          />
+        </Grid>
+        <Button className="buy_button">BUY</Button>
       </Grid>
-      <Button className="buy_button">BUY</Button>
     </Grid>
   );
 };
