@@ -8,34 +8,42 @@ const Bottel = () => {
   const bottelWrapperRef = useRef(null);
   const bottelRef = useRef(null);
   const [y, setY] = useState(0);
+  const [moveCenter, setMoveCenter] = useState(false);
+  const [moveBottom, setMoveBottom] = useState(false);
 
   const handleNavigation = (e) => {
-    const scrollPos = window.scrollY + window.innerHeight;
+    const scrollPos = window.scrollY;
 
-    if (y > Math.round(scrollPos / 100)) {
+    bottelRef.current.speedFactor = 1;
+
+    if (y > Math.round(scrollPos)) {
+      // bottelRef.current.speedFactor = 1;
+      // bottelRef.current.loadedImages = 3000;
+      // bottelRef.current.startMoving();
       bottelRef.current.prev();
-    } else if (y < Math.round(scrollPos / 100)) {
+    } else if (y < Math.round(scrollPos)) {
+      // bottelRef.current.speedFactor = 1;
+      // bottelRef.current.loadedImages = 3000;
+      // bottelRef.current.startMoving();
       bottelRef.current.next();
     }
-    setY(Math.round(scrollPos / 100));
-    console.log("y", y);
+    setY(Math.round(scrollPos));
+    // console.log("y", y);
+    console.log("bottelRef", bottelRef);
   };
 
   const handleBottelPosition = (e) => {
     const scrollPos = window.scrollY + window.innerHeight;
     if (scrollPos > 1000) {
-      mainRef.current.style.justifyContent = "center";
-      mainRef.current.style.transition = " justifyContent 1s ease-out";
+      setMoveCenter(true);
     } else {
-      mainRef.current.style.justifyContent = "flex-end";
-      mainRef.current.style.transition = " justifyContent 2s ease-out";
+      setMoveCenter(false);
     }
 
     if (scrollPos > 14500) {
-      bottelWrapperRef.current.style.transform = "translate(0%,-50%)";
-      mainRef.current.style.transition = " transform 1s ease-out";
-    } else if (scrollPos < 14500) {
-      bottelWrapperRef.current.style.transform = "translate(0%,0%) 2s ease-out";
+      setMoveBottom(true);
+    } else if (scrollPos < 14400) {
+      setMoveBottom(false);
     }
   };
 
@@ -56,8 +64,14 @@ const Bottel = () => {
   }, []);
 
   return (
-    <Grid className="bottel_container" ref={mainRef}>
-      <Grid className="bottel_wrapper" ref={bottelWrapperRef}>
+    <Grid
+      className={moveCenter ? "bottel_container_active" : "bottel_container"}
+      ref={mainRef}
+    >
+      <Grid
+        className={moveBottom ? "bottel_wrapper_active" : "bottel_wrapper"}
+        ref={bottelWrapperRef}
+      >
         <ThreeSixty
           ref={bottelRef}
           className="bottel_images"

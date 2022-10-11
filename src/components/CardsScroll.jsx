@@ -19,9 +19,6 @@ const CardsScroll = () => {
     mainRef = useRef(null);
 
   useLayoutEffect(() => {
-    // const topPos = (element) => element.getBoundingClientRect().top;
-    // const bottomPos = (element) => element.getBoundingClientRect().bottom;
-
     const onScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight;
 
