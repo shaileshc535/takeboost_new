@@ -12,12 +12,13 @@ const Bottel = () => {
   const handleNavigation = (e) => {
     const scrollPos = window.scrollY + window.innerHeight;
 
-    if (y > scrollPos) {
-      bottelRef.current.next();
-    } else if (y < scrollPos) {
+    if (y > Math.round(scrollPos / 100)) {
       bottelRef.current.prev();
+    } else if (y < Math.round(scrollPos / 100)) {
+      bottelRef.current.next();
     }
-    setY(scrollPos);
+    setY(Math.round(scrollPos / 100));
+    console.log("y", y);
   };
 
   const handleBottelPosition = (e) => {
@@ -30,12 +31,11 @@ const Bottel = () => {
       mainRef.current.style.transition = " justifyContent 2s ease-out";
     }
 
-    if (scrollPos >= 14500) {
+    if (scrollPos > 14500) {
       bottelWrapperRef.current.style.transform = "translate(0%,-50%)";
       mainRef.current.style.transition = " transform 1s ease-out";
-    } else {
-      bottelWrapperRef.current.style.transform =
-        "translate(0%,0%) 2s ease-in-out";
+    } else if (scrollPos < 14500) {
+      bottelWrapperRef.current.style.transform = "translate(0%,0%) 2s ease-out";
     }
   };
 
@@ -65,6 +65,7 @@ const Bottel = () => {
           imagePath="/bottel"
           fileName="{index}.webp"
           spinReverse
+          disableZoomin
         />
       </Grid>
     </Grid>

@@ -18,7 +18,7 @@ const HeroHeading = () => {
         </Typography>
       </Grid>
 
-      <Grid className="sick-container">
+      <Grid className="sick_container">
         <Grid container className="sick-wrapper">
           <Grid item className="left-content">
             <Typography variant="h1" className="border-heading">

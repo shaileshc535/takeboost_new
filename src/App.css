@@ -54,6 +54,7 @@
   justify-content: space-between;
   align-items: center;
   height: 15vh;
+  width: 100%;
 }
 
 .brand {
@@ -128,13 +129,15 @@
 .hero-container {
   position: relative;
   display: flex;
-  padding-right: 55px;
   padding-bottom: 50px;
   padding-left: 55px;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-end;
   height: 85vh;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
 }
 
 .hero-heading {
@@ -156,6 +159,12 @@
   font-size: 1.8vw !important;
   line-height: 100% !important;
   text-transform: capitalize !important;
+}
+
+.sick_container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
 }
 
 .sick-wrapper {
@@ -285,15 +294,15 @@
 .slides_container {
   position: relative;
   height: 1200vh;
-  width: 100vw;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .elderberry_wrapper {
-  width: 100%;
+  width: 100% !important;
   height: 400vh;
   background-color: #ff710d;
   position: sticky;
-  z-index: 5;
   left: 0;
   right: 0;
   top: 0;
@@ -301,11 +310,10 @@
 }
 
 .elderberry_wrapper_active {
-  width: 100%;
+  width: 100% !important;
   height: 400vh;
   background-color: #ff710d;
   position: sticky;
-  z-index: 10;
   left: 0;
   right: 0;
   top: 0;
@@ -313,11 +321,10 @@
 }
 
 .lemmon_wrapper {
-  width: 100%;
+  width: 100% !important;
   height: 400vh;
   background-color: #6f00ff;
   position: sticky;
-  z-index: 4;
   left: 0;
   right: 0;
   top: 0;
@@ -325,11 +332,10 @@
 }
 
 .lemmon_wrapper_active {
-  width: 100%;
+  width: 100% !important;
   height: 400vh;
   background-color: #6f00ff;
   position: sticky;
-  z-index: 10;
   left: 0;
   right: 0;
   top: 0;
@@ -337,11 +343,10 @@
 }
 
 .diamond_wrapper {
-  width: 100%;
+  width: 100% !important;
   height: 400vh;
   background-color: #fffcf4;
   position: sticky;
-  z-index: 3;
   left: 0;
   right: 0;
   top: 0;
@@ -349,11 +354,10 @@
 }
 
 .diamond_wrapper_active {
-  width: 100%;
+  width: 100% !important;
   height: 400vh;
   background-color: #fffcf4;
   position: sticky;
-  z-index: 10;
   left: 0;
   right: 0;
   top: 0;
@@ -362,6 +366,7 @@
 
 .scroll-content1 {
   position: sticky !important;
+  width: 100% !important;
   left: 0% !important;
   top: 0% !important;
   right: 0% !important;
@@ -372,9 +377,11 @@
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
+  overflow: hidden !important;
 }
 
 .scroll-content2 {
+  width: 100% !important;
   position: sticky !important;
   left: 0% !important;
   top: 0% !important;
@@ -386,10 +393,12 @@
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
+  overflow: hidden !important;
 }
 
 .scroll-content3 {
   position: sticky !important;
+  width: 100% !important;
   left: 0% !important;
   top: 0% !important;
   right: 0% !important;
@@ -400,6 +409,7 @@
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
+  overflow: hidden !important;
 }
 
 .left-block {
@@ -512,7 +522,7 @@
   bottom: auto;
   width: 27.986vw !important;
   margin-left: 50px !important;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .image_01_active {
@@ -524,7 +534,7 @@
   width: 27.986vw !important;
   margin-left: 50px !important;
   transform: rotate(360deg);
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .image_02 {
@@ -535,7 +545,7 @@
   bottom: auto;
   width: 27.986vw;
   margin-right: 50px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .image_02_active {
@@ -546,7 +556,7 @@
   bottom: auto;
   width: 27.986vw;
   margin-right: 50px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .image_03 {
@@ -557,7 +567,7 @@
   bottom: -30%;
   width: 27.986vw;
   margin-left: 50px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .image_03_active {
@@ -568,7 +578,7 @@
   bottom: -30%;
   width: 27.986vw;
   margin-left: 50px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .image_04 {
@@ -579,7 +589,7 @@
   bottom: -30%;
   width: 27.986vw;
   margin-right: 50px;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .image_04_active {
@@ -590,7 +600,7 @@
   bottom: -30%;
   width: 27.986vw;
   margin-right: 50px;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .card-scroll-container {
@@ -598,7 +608,7 @@
   padding-top: 475px;
   padding-bottom: 450px;
   position: relative;
-  z-index: 9;
+  /* z-index: 9; */
 }
 
 .card-scroll-heading-wrapper {
@@ -1027,7 +1037,8 @@
   width: 100%;
   height: 100vh;
   background-color: transparent;
-  z-index: 999;
+  z-index: 98;
+  pointer-events: none;
 }
 
 .bottel_wrapper {
@@ -1054,7 +1065,7 @@
   transform: translate(-50%, -50%);
   border-radius: 100%;
   opacity: 1;
-  z-index: 1000;
+  z-index: 99;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -1070,24 +1081,11 @@
   border: 2px solid black;
 }
 
-/*width*/
 ::-webkit-scrollbar {
-  width: 4px;
+  display: none;
 }
 
-/*track*/
-::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 50px;
-}
-
-/*thumb*/
-::-webkit-scrollbar-thumb {
-  background: rgb(0, 5, 33);
-  border-width: 1px;
-  border-style: none;
-}
-
+/* 
 .v360-menu-btns {
   background-color: #fff;
-}
+} */
