@@ -3,6 +3,8 @@ import { createTheme } from "@mui/material/styles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { routes as appRoutes } from "./Routes";
 import "./App.css";
+import Loading from "./screens/Loading";
+import { useEffect, useState } from "react";
 
 function App() {
   const theme = createTheme({
@@ -22,19 +24,36 @@ function App() {
     },
   });
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box height="100vh" display="flex" flexDirection="column">
         <Router>
           <Routes>
-            {appRoutes.map((route) => (
-              <Route
-                key={route.key}
-                path={route.path}
-                element={<route.component />}
-              />
-            ))}
+            {isLoading !== false ? (
+              <>
+                <Route key="home-route" path="/" element={<Loading />} />
+              </>
+            ) : (
+              <>
+                {appRoutes.map((route) => (
+                  <Route
+                    key={route.key}
+                    path={route.path}
+                    element={<route.component />}
+                  />
+                ))}
+              </>
+            )}
           </Routes>
         </Router>
       </Box>

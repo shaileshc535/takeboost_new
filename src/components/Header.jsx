@@ -10,7 +10,7 @@ const Header = () => {
         className="nav-container"
       >
         <Grid className="brand" item>
-          <Typography variant="h1" className="logo-name logo_name">
+          <Typography variant="h1" className="logo-name ">
             boost
           </Typography>
           <Typography variant="subtitle1" className="logo-desc">

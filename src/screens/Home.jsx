@@ -9,7 +9,6 @@ import Bottel from "../components/bottel/Bottel";
 import Cursor from "../components/cursor/Cursor";
 
 const Home = () => {
-  // useEffect(() => console.log("mounted"), []);
   return (
     <>
       <Grid className="home-wrapper">

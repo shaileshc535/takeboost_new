@@ -1,5 +1,5 @@
 import Home from "./screens/Home";
-import Test from "./screens/Test";
+import Loading from "./screens/Loading";
 
 export const routes = [
   {
@@ -11,9 +11,9 @@ export const routes = [
   },
   {
     key: "home-route",
-    title: "Test",
-    path: "/test",
+    title: "Loading",
+    path: "/loading",
     enabled: false,
-    component: Test,
+    component: Loading,
   },
 ];
